@@ -10,7 +10,7 @@ public class EnumTest {
 
     @EnumSource(value = EnumItems.class, mode = EnumSource.Mode.EXCLUDE)
     @ParameterizedTest(name = "{1}")
-   void checkMenuItemsEnum(EnumItems menuItems) {
+    void checkMenuItemsEnum(EnumItems menuItems) {
         mainPage.openPage();
         mainPage.checkMenuItemsEnum(menuItems);
     }

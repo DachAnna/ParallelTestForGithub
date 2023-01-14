@@ -16,13 +16,13 @@ public class MainPage {
         Selenide.open(url);
     }
 
-    public MainPage checkMenuItemsEnum (EnumItems menuItems) {
+    public MainPage checkMenuItemsEnum(EnumItems menuItems) {
         $("#guide").shouldHave(text(menuItems.getDesc()));
         System.out.println("Пункт меню " + "\"" + menuItems.getDesc() + "\"" + " присутствует на главной странице");
         return this;
     }
 
-    public MainPage checkMenuItemsValueSource (String menuItems) {
+    public MainPage checkMenuItemsValueSource(String menuItems) {
         $("#guide").shouldHave(text(menuItems));
         System.out.println("Тест на наличие " + "\"" + menuItems + "\"" + " пройден успешно");
         return this;
@@ -30,13 +30,13 @@ public class MainPage {
 
     public MainPage checkMenuItemsCSV(int allureId, String menuItems, String testName) {
         $("#guide").shouldHave(text(menuItems));
-        System.out.println(allureId + ". " + testName  + " тест на наличие " + "\""+ menuItems +"\"" + " пройден успешно");
+        System.out.println(allureId + ". " + testName + " тест на наличие " + "\"" + menuItems + "\"" + " пройден успешно");
         return this;
     }
 
     public MainPage checkMenuItemsMethode(int allureId, String menuItems, String testName) {
         $("#guide").shouldHave(text(menuItems));
-        System.out.println(allureId + ". " + testName  + " тест на наличие " + "\"" + menuItems + "\"" + " пройден успешно");
+        System.out.println(allureId + ". " + testName + " тест на наличие " + "\"" + menuItems + "\"" + " пройден успешно");
         return this;
     }
 }
